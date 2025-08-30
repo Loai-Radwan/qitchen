@@ -145,15 +145,16 @@ header .links{
 header .links li{
     padding: 7px 10px;
     cursor: pointer;
+    transition: 0.3s;
+    border:1px solid transparent;
 }
-header .links li:last-child {
-    border:1px solid var(--border);
+header .links li.active , header .links li:hover {
+    border-color: var(--border);
     background-color: var(--background-muted);
     border-radius: 6px;
 }
 header .links li a{
     color: var(--text);
-    pointer-events: none;
     text-transform: uppercase;
 }
 
@@ -192,10 +193,10 @@ header .hidden-nav.show ul span{
     background-color: var(--border);
 }
 header .hidden-nav.show ul span:first-of-type{
-    top: 15%;
+    top: 10%;
 }
 header .hidden-nav.show ul span:last-of-type{
-    bottom: 15%;
+    bottom: 10%;
 }
 header .hidden-nav.show ul span::before ,
 header .hidden-nav.show ul span::after{
@@ -261,6 +262,7 @@ header .hidden-nav.show ul li a{
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
     transition: 0.5s;
 }
 /* .main .links-video li.active{
