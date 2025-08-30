@@ -15,7 +15,7 @@
 
 
 body{
-    /* background-color: var(--background ); */
+    background-color: var(--background );
 }
 
 img , video{
@@ -43,7 +43,6 @@ header{
     left: 40px;
     top: 60px;
     z-index: 1000;
-    /* justify-content: space-between; */
 }
 
 header .menu-icons{
