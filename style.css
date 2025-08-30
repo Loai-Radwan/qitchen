@@ -16,6 +16,7 @@
 
 body{
     background-color: var(--background );
+    font-family: "Open Sans", sans-serif;
 }
 
 img , video{
@@ -99,6 +100,7 @@ header .links li{
 header .links li:last-child {
     border:1px solid var(--border);
     background-color: var(--background-muted);
+    border-radius: 6px;
 }
 header .links li a{
     color: var(--text);
@@ -172,7 +174,118 @@ header .hidden-nav.show ul li a{
     color: var(--text);
 }
 
-
-
 /* End Header  */
 
+
+/* Start Main page  */
+
+.main{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+.main .main-video{
+    flex:  2.2 1 ;
+    position: relative;
+}
+.main .main-video video{
+    border-radius: 15px;
+    object-fit: cover;
+    min-height: calc(100vh - 30px);
+}
+.main .main-video h1{
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    font-size: 80px;
+    color: var(--text);
+    font-weight: normal;
+}
+.main .links-video{
+    flex:  0.5 1 ;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.main .links-video li{
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.main .links-video li:active{
+    /* position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0; */
+}
+.main .links-video li img{
+    border-radius: 10px;
+    filter: grayscale(0.4);
+    transition: 0.3s;
+}
+.main .links-video li:hover img{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+.main .links-video li p{
+    padding: 5px 7px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    border-top-left-radius: 15px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: uppercase;
+    color: var(--text);
+}
+.main .links-video li p span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    line-height: 25px;
+    background-color: var(--background-muted);
+    color: var(--text);
+    text-align: center;
+    overflow: hidden;
+}
+.main .links-video li:hover p span i {
+    animation: arrow 0.7s forwards;
+}
+
+
+/* End Main page  */
+
+
+
+
+
+
+
+
+
+
+
+/* Animation  */
+@keyframes arrow {
+    0%,100%{
+        transform: translate(0);
+    }
+    40%{
+        transform: translateX(20px);
+    }
+    45%{
+        transform: translate(0 , 30px);
+    }
+    50%{
+        transform: translate(-20px , 0)
+    }
+
+
+}
