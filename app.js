@@ -16,15 +16,15 @@ menuButton.addEventListener('click' , () => {
 
 Array.from(headerLinks).forEach(link => {
     link.addEventListener('click' , () => {
-        location.pathname = link.children[0].getAttribute('href')
+        location.href = `http://loai-radwan.github.io/qitchen/${link.children[0].getAttribute('href')}`
 
     })
 })
 Array.from(mainLinks).forEach(link => {
-        link.addEventListener('click' , () => {
-                location.pathname = link.dataset.link
-
-
+    link.addEventListener('click' , () => {
+        // link.classList.add('active')
+            location.href = `http://loai-radwan.github.io/qitchen/${link.dataset.link}`
+            // link.classList.remove('active')
 
     })
 })
