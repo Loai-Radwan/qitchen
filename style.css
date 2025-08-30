@@ -176,14 +176,10 @@ header .links li {
     transition: 0.3s;
     border:1px solid transparent;
 }
-<<<<<<< HEAD
 
-header .links li:last-child {
-    border: 1px solid var(--border);
-=======
 header .links li.active , header .links li:hover {
     border-color: var(--border);
->>>>>>> 0cc2a724242dad04ee2c7f222f4ee32a6ff0ef95
+
     background-color: var(--background-muted);
     border-radius: 6px;
 }
@@ -230,21 +226,11 @@ header .hidden-nav.show ul span {
     height: 2px;
     background-color: var(--border);
 }
-<<<<<<< HEAD
-
-header .hidden-nav.show ul span:first-of-type {
-    top: 15%;
-}
-
-header .hidden-nav.show ul span:last-of-type {
-    bottom: 15%;
-=======
 header .hidden-nav.show ul span:first-of-type{
     top: 10%;
 }
 header .hidden-nav.show ul span:last-of-type{
     bottom: 10%;
->>>>>>> 0cc2a724242dad04ee2c7f222f4ee32a6ff0ef95
 }
 
 header .hidden-nav.show ul span::before,
@@ -323,12 +309,9 @@ main .boxholder .box {
     border-radius: 10px;
     transition: 0.5s;
 }
-<<<<<<< HEAD
-
-
 
 main .boxholder .box img {
-=======
+
 /* .main .links-video li.active{
     position: fixed;
     width: 100vw;
@@ -337,17 +320,14 @@ main .boxholder .box img {
     top: 0;
     z-index: 999;
     } */ 
-.main .links-video li img{
->>>>>>> 0cc2a724242dad04ee2c7f222f4ee32a6ff0ef95
+
     border-radius: 10px;
     filter: grayscale(0.4);
     transition: 0.3s;
 
 }
-<<<<<<< HEAD
 
 main .boxholder .box:hover img {
-=======
 /* .main .links-video li img.active{
     position: fixed;
     left: 0;
@@ -356,8 +336,7 @@ main .boxholder .box:hover img {
     width: 100vw;
     filter: grayscale(0);
 } */
-.main .links-video li:hover img{
->>>>>>> 0cc2a724242dad04ee2c7f222f4ee32a6ff0ef95
+
     filter: grayscale(0);
     transform: scale(1.1);
 }
