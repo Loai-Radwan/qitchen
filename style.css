@@ -18,6 +18,28 @@ html {
     --background-primary: #efe7d2;
 }
 
+/* Scrollbar track */
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+    background-color: var(--background-muted);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--text);
+    border-radius: 8px;
+    border: 2px solid var(--background-muted);
+    transition: .3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--text-muted);
+}
+/* end of scrollbar */
 body {
     background-color: var(--background);
     font-family: "Open Sans", sans-serif;
@@ -289,10 +311,40 @@ header .hidden-nav.show ul li {
     text-transform: uppercase;
     margin: 15px 0;
 }
-
 header .hidden-nav.show ul li a {
+    color: var(--text-muted);
+    position: relative;
+    transition: .3s;
+}
+header .hidden-nav.show ul li a:hover{
     color: var(--text);
 }
+/* links hovering effects */
+header .hidden-nav.show ul li a:hover::after ,
+header .hidden-nav.show ul li a:hover::before {
+    animation: width forwards .5s;
+}   
+header .hidden-nav.show ul li a::after{
+    content: '';
+    position: absolute;
+    background-color: var(--text);
+    width: 0;
+    bottom: 0;
+    z-index: 10;
+    left: 50%;
+    height: 1px;
+}
+header .hidden-nav.show ul li a::before{
+    content: '';
+    position: absolute;
+    background-color: var(--text);
+    width: 0;
+    bottom: 0;
+    z-index: 10;
+    right: 50%;
+    height: 1px;
+}
+
 
 /* End Header  */
 
@@ -747,6 +799,14 @@ footer {
 /* End Footer  */
 
 /* Animation  */
+/*links on hidden nav hovering animation   */
+@keyframes width {
+    to {
+        width: 50%;
+    }
+}
+
+/* arrows in boxes */
 @keyframes arrow {
 
     0%,
