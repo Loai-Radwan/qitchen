@@ -71,19 +71,21 @@ a {
 
 .heading :where(h2, h4) {
     font-family: "GFS Didot", serif;
-    font-style: normal;
     text-transform: uppercase;
-    font-size: 35px;
-    font-weight: bold;
+    font-weight: normal;
     color: var(--text);
     display: inline-block;
     text-align: center;
     text-wrap: wrap ;
 }
 
+.heading h2 {
+    font-size: 35px;
+}
 .heading h4 {
     font-size: 25px;
 }
+
 
 .heading span {
     display: inline-block;
@@ -93,7 +95,17 @@ a {
     position: relative;
     margin: 0 20px 8px;
 }
-
+@media (max-width:767px){
+    .heading h2 {
+        font-size: 20px;
+    }
+    .heading h4 {
+        font-size: 18px;
+    }
+    .heading span {
+        margin: 0 5px 8px;
+    }
+}
 /* span decoration */
 .heading span::after {
     content: "";
@@ -245,7 +257,7 @@ header .links {
 @media (max-width:767px){
     header{
         justify-content: space-evenly;
-        width: 300px;
+        width: 200px;
     }
     header .links {
         display: none;
@@ -513,7 +525,7 @@ main .boxholder .box:hover p span i {
     margin-top: 15px;
 }
 
-.reservation .reserve form>input {
+.reservation .reserve form > input {
     width: 500px;
     height: 50px;
     color: var(--text);
@@ -525,7 +537,7 @@ main .boxholder .box:hover p span i {
     outline: none;
 }
 
-.reservation .reserve form>input:focus {
+.reservation .reserve form > input:focus {
     border: 1px solid rgba(255, 232, 203, 0.692);
 }
 
@@ -535,6 +547,7 @@ main .boxholder .box:hover p span i {
     justify-content: space-evenly;
     gap: 7px;
 }
+
 
 .reservation .reserve form .extra input {
     width: calc(485px / 3);
@@ -547,7 +560,22 @@ main .boxholder .box:hover p span i {
     outline: none;
     border: 1px solid var(--border);
 }
-
+@media (max-width:767px){
+    .reservation .reserve form {
+        width: 100%;
+    }
+    .reservation .reserve form  input{
+        width: 90%;
+    }
+    .reservation .reserve form .extra{
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+    .reservation .reserve form .extra input {
+        width: 90%;
+    }
+}
 .reservation .reserve form .extra input:focus {
     color: var(--text);
     border: 1px solid rgba(255, 232, 203, 0.692);
@@ -570,9 +598,17 @@ main .boxholder .box:hover p span i {
 
 /* start contact */
 /* contact information */
+@media (max-width:1330px){
+    .contact{
+        flex-direction: column;
+    }
+    .contact .section{
+        width: 100%;
+    }
+}
 .contact .right{
     flex:  1 0;
-    padding: 0 20px;
+    padding: 0 10px;
     text-align: center;
     margin: 0;
 }
@@ -586,17 +622,29 @@ main .boxholder .box:hover p span i {
     margin:  0 5px 8px;
 }
 .contact .info {
-    width: 100%;
+    flex:  1 0;
+    padding: 0 10px;
     height: calc(100vh - 100px)  ;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50% 60px;
     gap: 15px;
 }
+@media (max-width:767px){
+    .contact .info{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
 
-.contact .info>div {
+.contact .info > div {
     background-color: var(--background);
     border-radius: 7px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 /* opening times */
@@ -613,16 +661,20 @@ main .boxholder .box:hover p span i {
 /* cards */
 
 .contact .info .images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
     width: 100%;
     padding: 10px;
+    overflow: hidden;
+    gap: 20px;
 }
 
+.contact .info .images div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 .contact .info .images img {
     object-fit: contain;
+    flex: 1 0;
     width:calc(50% - 30px);
     transition: 0.3s;
     filter: brightness(0.9);
@@ -635,6 +687,11 @@ main .boxholder .box:hover p span i {
 
 .contact .box {
     width: 100%;
+}
+@media (max-width:767px){
+    .contact .boxholder .box{
+        height: 300px;
+    }
 }
 
 /* contact */
@@ -675,11 +732,20 @@ main .boxholder .box:hover p span i {
     width: calc(50% - 30px);
 }
 
-.blog>.right {
+
+.blog > .right {
     width: 50%;
     margin-left: auto;
 }
-
+@media (max-width:991px){
+    .blog .section{
+        position: static;
+        width: 100%;
+    }
+    .blog > .right {
+        width: 100%;
+    }
+}
 .blogs {
     display: flex;
     flex-direction: column;
@@ -698,7 +764,17 @@ main .boxholder .box:hover p span i {
     line-height: 1.5;
     align-items: center;
 }
+@media (max-width:767px){
+    .blogs .blog {
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid var(--border);
+        padding: 15px;
+        border-radius: 10px;
+        background-color: var(--background-muted);
+    }
 
+}
 .blogs .blog .left {
     transition: 0.5s;
     flex: 1 0;
@@ -728,6 +804,15 @@ main .boxholder .box:hover p span i {
 
 .blogs .blog .right .date {
     font-size: small;
+}
+@media (max-width:767px){
+    .blogs .blog .right{
+        text-align: center;
+    }
+    .blogs .blog .right .date {
+        display: none;
+    }
+
 }
 
 .blogs .blog .right .date span {
@@ -760,11 +845,21 @@ main .boxholder .box:hover p span i {
     width: calc(50% - 30px);
 }
 
+
 .menu .right {
     margin-left: auto;
     width: 50%;
 }
+@media (max-width:991px){
+    .menu .section {
+        position: static;
+        width: 100%;
+    }
+    .menu .right{
+        width: 100%;
+    }
 
+}
 .menu .menu-section {
     text-align: center;
     border: 1px solid var(--border);
@@ -806,6 +901,7 @@ main .boxholder .box:hover p span i {
     margin: 15px 0;
 }
 
+
 .menu .food .food-box .text {
     text-align: left;
     margin-right: 20px;
@@ -820,7 +916,23 @@ main .boxholder .box:hover p span i {
     justify-content: space-between;
     font-weight: normal;
 }
+@media (max-width:767px){
+    .menu .food .food-box {
+        flex-direction: column;
+        border: 1px solid var(--border);
+        padding: 15px;
+        border-radius: 10px;
+        background-color: var(--background-muted);
+    }
+    .menu .food .food-box .text {
+        text-align: center;
+    }
+    .menu .food .food-box .text h4 {
+        justify-content: center;
+        gap: 30px;
+    }
 
+}
 .menu .food .food-box .text p {
     color: var(--text-muted);
     line-height: 1.5;
@@ -829,6 +941,8 @@ main .boxholder .box:hover p span i {
 /* End Menu  */
 
 /* start about */
+
+
 
 .about .right {
     display: grid;
@@ -841,24 +955,71 @@ main .boxholder .box:hover p span i {
     height: calc(100vh  - 20px);
 
 }
-
-.about .right .heading h4{
-    font-size: 22px;
-    text-align: center;
+@media (max-width:1330px){
+    .about{
+        flex-direction: column;
+    }
+    .about .section{
+        width:100% ;
+    }
+    .about .right{
+        width: 100%;
+        height: 100%;
+    }
 }
 .about .right > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
     height: 100%;
     overflow: hidden;
 }
+@media (max-width:767px){
+    .about .right{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .about .right > div{
+        width: 100%;
+    }
+}
+.about .right .heading h4{
+    font-size: 22px;
+    /* text-align: center; */
+}
+
 .about .right div p {
     color: var(--text-muted);
 }
 
 .about .right .reviews {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
     grid-column: span 2;
     gap: 20px;
+}
+.about .right .reviews .review{
+    text-align: center;
+    flex: 1 0;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+@media (max-width:767px){
+    .about .right .reviews {
+        flex-direction: column;
+        border: 1px solid var(--border);
+        background-color: var(--background-muted);
+        padding: 15px;
+        border-radius: 10px;
+    }
+    .about .right .reviews .review{
+        width: 90%;
+    }
+
 }
 .about .right .reviews h3{
     font-family: "GFS Didot", serif;
@@ -868,13 +1029,7 @@ main .boxholder .box:hover p span i {
     font-size: 14px;
 }
 
-.about .right .reviews .review{
-    text-align: center;
-    flex: 1 0;
-    padding: 15px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-}
+
 .about .right .image{
     border-radius: 5px;
     overflow: hidden;
@@ -894,9 +1049,18 @@ main .boxholder .box:hover p span i {
     border-radius: 10px;
     line-height: 1.7;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .about .right footer{
     grid-column: span 2;
+}
+@media (max-width:767px){
+    .about footer{
+        width: 100%;
+    }
 }
 /* Start Footer  */
 footer {
