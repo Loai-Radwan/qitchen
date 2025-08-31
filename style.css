@@ -784,6 +784,75 @@ main .boxholder .box:hover p span i {
 
 /* End Menu  */
 
+/* start about */
+
+.about .right {
+    display: grid;
+    width: 50%;
+    grid-template-columns: 50% 50% ;
+    grid-template-rows: 35%  15% 35% 60px ;
+    align-items: center;
+    gap: 15px;
+    padding: 0 10px;
+    height: calc(100vh  - 20px);
+
+}
+
+.about .right .heading h4{
+    font-size: 22px;
+    text-align: center;
+}
+.about .right > div{
+    height: 100%;
+    overflow: hidden;
+}
+.about .right div p {
+    color: var(--text-muted);
+}
+
+.about .right .reviews {
+    display: flex;
+    align-items: center;
+    grid-column: span 2;
+    gap: 20px;
+}
+.about .right .reviews h3{
+    font-family: "GFS Didot", serif;
+    font-weight: normal;
+}
+.about .right .reviews p {
+    font-size: 14px;
+}
+
+.about .right .reviews .review{
+    text-align: center;
+    flex: 1 0;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+.about .right .image{
+    border-radius: 5px;
+    overflow: hidden;
+}
+.about .right img{
+    width: 100%;
+    filter: brightness(.9);
+    transition: .3s;
+}
+.about .right img:hover{
+    filter: brightness(1);
+    transform: scale(1.05);
+}
+.about .right .text{
+    border: 1px solid var(--border);
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 1.7;
+}
+.about .right footer{
+    grid-column: span 2;
+}
 /* Start Footer  */
 footer {
     border: 1px solid var(--border);
