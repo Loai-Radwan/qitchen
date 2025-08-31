@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 :root {
     --border: rgba(239, 231, 210, 15%);
@@ -38,42 +41,38 @@ a {
 }
 
 /* heading  */
+.heading{
+    position: relative;
+    margin:  20px auto;
+}
 .heading :where(h2, h4) {
     font-family: "GFS Didot", serif;
     font-style: normal;
     text-transform: uppercase;
     font-size: 35px;
     font-weight: bold;
-    position: relative;
     color: var(--text);
-    width: fit-content;
-    margin: 0 auto;
+    display: inline-block;
+    /* width: fit-content; */
+    /* margin: 0 auto; */
 }
 
 .heading h4 {
     font-size: 25px;
 }
 
-.heading :where(h2, h4) span {
+.heading  span {
     display: inline-block;
     width: 50px;
     height: 1px;
     background-color: var(--border);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    margin: 0 20px 8px;
 }
 
-.heading :where(h2, h4) span:first-child {
-    left: -30%;
-}
-
-.heading :where(h2, h4) span:last-child {
-    right: -30%;
-}
 
 /* span decoration */
-.heading :where(h2, h4) span::after {
+.heading  span::after {
     content: '';
     top: 4px;
     position: absolute;
@@ -84,11 +83,11 @@ a {
     transform: rotate(45deg) translate(-50%, -50%);
 }
 
-.heading :where(h2, h4) span:first-of-type:after {
+.heading  span:first-of-type:after {
     left: 0;
 }
 
-.heading :where(h2, h4) span:last-of-type:after {
+.heading  span:last-of-type:after {
     right: 0;
 }
 
@@ -400,17 +399,20 @@ main .boxholder .box:hover p span i {
     opacity: .8;
 }
 
+.reservation .right{
+    flex: 1 0;
+}
+
 .reservation .reserve {
+    height: calc(100% - 70px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--border);
+    border: 1px solid var(--border);
     border-radius: 7px;
-    padding: 40px;
-    gap: 40px;
-    height: calc(100% - 70px);
-    flex: 1 0;
+    padding: 20px 40px;
+    gap: 15px;
 }
 
 .reservation .reserve form {
@@ -419,6 +421,7 @@ main .boxholder .box:hover p span i {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    margin-top: 15px;
 }
 
 .reservation .reserve form>input {
@@ -553,12 +556,23 @@ main .boxholder .box:hover p span i {
     transform: scale(1.3);
 }
 /* blog */
-.blogs{
+.blog .section {
+    position: fixed;
+    top: 10px;
+    width: calc(50% - 30px);
+}
+
+.blog >  .right{
     width: 50%;
+    margin-left: auto;
+}
+
+.blogs{
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px  30px;
+    border: 1px solid var(--border);
 }
 .blogs .heading{
     padding-bottom: 40px;
@@ -623,9 +637,21 @@ main .boxholder .box:hover p span i {
 
 
 /* Start Menu  */
+.menu .section{
+    position: fixed;
+    top: 10px;
+    width: calc(50% - 30px);
+}
+.menu .right{
+    margin-left:auto ;
+    width: 50%;
+}
 .menu .menu-section {
-    flex: 1;
+
     text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding-top: 10px;
 }
 
 .menu ul {
@@ -648,25 +674,69 @@ main .boxholder .box:hover p span i {
 }
 
 .menu .food {
-    margin: 30px 0;
+    padding: 20px 20px 30px;
+}
+.menu .food .heading{
+    padding-bottom: 20px;
 }
 
 .menu .food .food-box {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
+    margin: 15px 0;
 }
 
 .menu .food .food-box img {
-    width: 25%;
+    /* width: 25%; */
 }
 
-.menu .food .food-box img {}
+.menu .food .food-box .text {
+    text-align: left;
+    margin-right: 20px;
+}
 
-.menu .food .food-box img {}
+.menu .food .food-box .text h4 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    justify-content: space-between;
+    font-weight: normal;
+}
+.menu .food .food-box .text p {
+    color: var(--text-muted);
+    line-height: 1.5;
+}
 
 
 /* End Menu  */
+
+
+
+
+
+
+/* Start Footer  */
+footer{
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 60px;
+}
+/* End Footer  */
+
+
+
+
+
+
 /* Animation  */
 @keyframes arrow {
 
