@@ -127,10 +127,18 @@ main {
     color: var(--text);
 }
 
+
 .section {
     width: 50%;
 }
-
+@media (max-width:991px){
+    main{
+        flex-direction: column;
+    }
+    .section{
+        width: 100%;
+    }
+}
 .section :where(img, video) {
     border-radius: 15px;
     object-fit: cover;
@@ -147,7 +155,11 @@ main {
     font-family: "GFS Didot", sans-serif, Arial;
     text-transform: uppercase;
 }
-
+@media (max-width:767px){
+    .section h1{
+        font-size: 30px;
+    }
+}
 /* End Section landing page  */
 
 /* Start Header  */
@@ -164,6 +176,17 @@ header {
     left: 40px;
     top: 60px;
     z-index: 1000;
+}
+
+@media (max-width:991px){
+    header:not(:has(.show)){
+        left: 50% ;
+        transform: translateX(-50%);
+        top: 50px;
+    }
+}
+header:has(.show){
+    position: static;
 }
 
 header .menu-icons {
@@ -185,7 +208,7 @@ header .menu-icons {
 header .menu-icons.active {
     position: relative;
     left: 15%;
-    top: 30%;
+    top: 100%;
     padding: 20px;
     z-index: 1002;
 }
@@ -219,7 +242,15 @@ header .links {
     align-items: center;
     gap: 20px;
 }
-
+@media (max-width:767px){
+    header{
+        justify-content: space-evenly;
+        width: 300px;
+    }
+    header .links {
+        display: none;
+    }
+}
 header .links li {
     padding: 7px 10px;
     cursor: pointer;
@@ -289,10 +320,10 @@ header .hidden-nav.show ul span:last-of-type {
 header .hidden-nav.show ul span::before,
 header .hidden-nav.show ul span::after {
     content: "";
-    top: 5px;
+    top: 3px;
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border: 1px solid var(--border);
     background-color: var(--background);
     transform: rotate(45deg) translate(-50%, -50%);
@@ -315,6 +346,19 @@ header .hidden-nav.show ul li a {
     color: var(--text-muted);
     position: relative;
     transition: .3s;
+}
+@media (max-width:767px){
+    header .hidden-nav.show ul li {
+        font-size: 25px;
+    }
+    header .hidden-nav.show ul span:first-of-type {
+    top: 20%;
+}
+
+header .hidden-nav.show ul span:last-of-type {
+    bottom: 20%;
+}
+
 }
 header .hidden-nav.show ul li a:hover{
     color: var(--text);
@@ -361,6 +405,14 @@ header .hidden-nav.show ul li a::before{
     flex-direction: column;
     gap: 5px;
 }
+@media (max-width:991px){
+
+    .main .links-video  {
+        flex-direction: row;
+    }
+
+}
+
 
 main .boxholder .box {
     cursor: pointer;
@@ -369,7 +421,20 @@ main .boxholder .box {
     border-radius: 10px;
     transition: 0.5s;
 }
+@media (max-width:767px){
 
+    .main .links-video  {
+        flex-direction: column;
+        gap: 20px;
+    }
+    main .boxholder .box{
+        width: 100%;
+    }
+    main .boxholder .box img{
+        width: 100%;
+    }
+
+}
 main .boxholder .box img {
     border-radius: 10px;
     filter: grayscale(0.4);
