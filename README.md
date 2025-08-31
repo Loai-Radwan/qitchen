@@ -21,7 +21,7 @@
 
 ---
 
-## ✨ Features
+##  Features
 
 - Multi-page static site: Home, Menu, Reservation, Blog, About, Contact  
 - Responsive design powered by a custom CSS `style.css`  
@@ -31,7 +31,7 @@
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML5** – Structure and markup  
 - **CSS3** – Styling and layout (`style.css`)  
@@ -42,7 +42,7 @@
 
 
 
-## 📂 Project Structure
+##  Project Structure
 
 qitchen/
 │
@@ -61,7 +61,19 @@ qitchen/
 
 ---
 
-## 🔧 Customisation  
+## Usage Guide
+
+- Home Page: Welcoming intro; perhaps includes site navigation
+
+- Menu Page: Showcase dishes or offerings (could use static markup or JS to load dynamically)
+
+- Reservation Page: Static form or interactive reservation workflow
+
+- Blog Page: Static posts or placeholder for dynamic content
+
+- Contact Page: Form or contact info (email, phone, location)
+
+##  Customisation  
 
 - Update text, images, and videos to fit your brand  
 - Modify `style.css` for colors, fonts, and layout changes  
@@ -69,7 +81,7 @@ qitchen/
 
 ---
 
-## 🤝 Contributing  
+##  Contributing  
 
 Contributions are welcome!  
 
@@ -79,7 +91,7 @@ Contributions are welcome!
 
 ---
 
-## 📜 License  
+##  License  
 
 This project is licensed under the **MIT License**.  
 Feel free to use and modify for personal or educational purposes.  
