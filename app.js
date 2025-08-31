@@ -12,6 +12,14 @@ let specialFood = document.getElementById('special')
 
 let copyRight = document.querySelector('footer p span')
 
+let images = document.querySelectorAll('img')
+Array.from(images).forEach(img => {
+    img.setAttribute('loading', 'lazy')
+})
+
+console.log(images);
+
+
 
 menuButton.addEventListener('click' , () => {
     menuButton.classList.toggle('active')
