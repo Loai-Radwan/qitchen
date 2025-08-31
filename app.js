@@ -1,29 +1,22 @@
 
 
 let menu = document.querySelector('.hidden-nav')
-
 let menuButton = document.querySelector('.menu-icons')
 
-let menuSection = document.querySelector('.menu .menu-section')
+let mainLinks = document.querySelectorAll('.main li')
 
+let menuSection = document.querySelector('.menu .menu-section')
 let makiFood = document.getElementById('maki')
 let uramakiFood = document.getElementById('uramaki')
 let specialFood = document.getElementById('special')
 
 let copyRight = document.querySelector('footer p span')
 
-copyRight.innerHTML = new Date().getFullYear()
-
-
-
-let mainLinks = document.querySelectorAll('.main li')
-
 
 menuButton.addEventListener('click' , () => {
     menuButton.classList.toggle('active')
     menu.classList.toggle('show')
 })
-
 
 Array.from(mainLinks).forEach(link => {
     link.addEventListener('click' , () => {
@@ -120,5 +113,5 @@ foodHttp.open('GET' , 'js/data.json' , true)
 foodHttp.send()
 
 
-console.log(menuSection)
 
+copyRight.innerHTML = new Date().getFullYear()
