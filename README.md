@@ -15,6 +15,10 @@
 
 ---
 
+![Restaurant Demo](img/qitchen.png)
+
+
+
 ## Demo / Live Preview
 
 🌐 Live Demo: [Qitchen on GitHub Pages](https://loai-radwan.github.io/qitchen/)
