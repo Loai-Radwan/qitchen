@@ -14,12 +14,10 @@
 - [License](#license)
 
 ---
-
-![Restaurant Demo](img/qitchen.png)
-
-
-
 ## Demo / Live Preview
+
+[![Restaurant Demo](img/qitchen.png)](https://loai-radwan.github.io/qitchen/)
+
 
 🌐 Live Demo: [Qitchen on GitHub Pages](https://loai-radwan.github.io/qitchen/)
 
